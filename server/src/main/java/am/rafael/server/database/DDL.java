@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DDL {
 
     public static boolean getCon(String u, String p){
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/", u, p)){
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", u, p)){
             Statement statement = connection.createStatement();
             statement.execute("CREATE DATABASE IF NOT EXISTS raf_chat_clients_2018");
             statement.execute("USE raf_chat_clients_2018");
