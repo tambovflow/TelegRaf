@@ -75,9 +75,7 @@ public class Client {
         }
 
     }
-
-
-
+    
     public static String[] userInput(){
         String[] logPass = new String[2];
         System.out.print("Your login: ");
